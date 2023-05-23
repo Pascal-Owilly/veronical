@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Great_Vibes';
+  src: url('../fonts/Great_Vibes/GreatVibes-Regular.ttf') format('truetype');
+} 
+
+.modal-overlay {
+    position: fixed;
+  /* width: 400px; */
+    /* height: 500px;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2 !important;
+    
+  }
+  
+  .modal-content {
+    width: 290px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+     background-color: rgb(0, 0, 0, 0.6);
+     height: 400px;
+     /* width: 70%; */
+  }
+  
+  .modal-content h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .modal-content button {
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    border: 1px solid yellow;
+  }
+  
