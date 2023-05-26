@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/veronical/static/css/main.88e94a4c.css",
-    "main.js": "/veronical/static/js/main.e198982f.js",
+    "main.css": "/veronical/static/css/main.44e72917.css",
+    "main.js": "/veronical/static/js/main.57e79ccd.js",
     "static/js/787.63e47474.chunk.js": "/veronical/static/js/787.63e47474.chunk.js",
     "static/media/waitingforu.mp3": "/veronical/static/media/waitingforu.2a9b64ab76b5bb24a1c1.mp3",
     "static/media/promise.mp3": "/veronical/static/media/promise.3d6e6866bd621286829d.mp3",
@@ -9,26 +9,25 @@
     "static/media/us.png": "/veronical/static/media/us.84f350082193e92ef989.png",
     "static/media/GreatVibes-Regular.ttf": "/veronical/static/media/GreatVibes-Regular.39c04c4f40f4b2c45bcc.ttf",
     "static/media/love_island.jpg": "/veronical/static/media/love_island.5156b628fbdc685f89ca.jpg",
+    "static/media/flower4.jpeg": "/veronical/static/media/flower4.a8f6b408690db37cae9f.jpeg",
+    "static/media/flower5.jpeg": "/veronical/static/media/flower5.963c4330b7d77f3bdd13.jpeg",
     "static/media/vera.png": "/veronical/static/media/vera.acc104f48a89897e0d44.png",
     "static/media/love.jpg": "/veronical/static/media/love.6b277fb522b38ea75336.jpg",
     "static/media/hearts2.jpg": "/veronical/static/media/hearts2.8c0723dec2c4043e3f9c.jpg",
     "static/media/loveu2.jpg": "/veronical/static/media/loveu2.0ad363546cf9798165ba.jpg",
     "static/media/love3.jpg": "/veronical/static/media/love3.3483bb9e3e93c3e8c34f.jpg",
-    "static/media/loveu4.jpg": "/veronical/static/media/loveu4.ad662218f2614f58cfb2.jpg",
     "static/media/love4.jpg": "/veronical/static/media/love4.99d52c68833d2035e9d8.jpg",
     "static/media/loveu3.jpg": "/veronical/static/media/loveu3.a1d7303c9f8d5a2f06d9.jpg",
     "static/media/loveu5.jpg": "/veronical/static/media/loveu5.8ae945229619c813b9be.jpg",
     "static/media/hearts.jpg": "/veronical/static/media/hearts.4b6364b99f43f588d045.jpg",
     "static/media/love6.jpg": "/veronical/static/media/love6.83b1928de58ff0ecc074.jpg",
-    "static/media/love2.jpg": "/veronical/static/media/love2.908a441ea4f031b31af9.jpg",
-    "static/media/love5.jpg": "/veronical/static/media/love5.fb89c155cd9117e3b9e2.jpg",
     "index.html": "/veronical/index.html",
-    "main.88e94a4c.css.map": "/veronical/static/css/main.88e94a4c.css.map",
-    "main.e198982f.js.map": "/veronical/static/js/main.e198982f.js.map",
+    "main.44e72917.css.map": "/veronical/static/css/main.44e72917.css.map",
+    "main.57e79ccd.js.map": "/veronical/static/js/main.57e79ccd.js.map",
     "787.63e47474.chunk.js.map": "/veronical/static/js/787.63e47474.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.88e94a4c.css",
-    "static/js/main.e198982f.js"
+    "static/css/main.44e72917.css",
+    "static/js/main.57e79ccd.js"
   ]
 }
