@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/veronical/static/css/main.6d341a81.css",
-    "main.js": "/veronical/static/js/main.79e24094.js",
+    "main.css": "/veronical/static/css/main.88e94a4c.css",
+    "main.js": "/veronical/static/js/main.e198982f.js",
     "static/js/787.63e47474.chunk.js": "/veronical/static/js/787.63e47474.chunk.js",
     "static/media/waitingforu.mp3": "/veronical/static/media/waitingforu.2a9b64ab76b5bb24a1c1.mp3",
     "static/media/promise.mp3": "/veronical/static/media/promise.3d6e6866bd621286829d.mp3",
@@ -23,12 +23,12 @@
     "static/media/love2.jpg": "/veronical/static/media/love2.908a441ea4f031b31af9.jpg",
     "static/media/love5.jpg": "/veronical/static/media/love5.fb89c155cd9117e3b9e2.jpg",
     "index.html": "/veronical/index.html",
-    "main.6d341a81.css.map": "/veronical/static/css/main.6d341a81.css.map",
-    "main.79e24094.js.map": "/veronical/static/js/main.79e24094.js.map",
+    "main.88e94a4c.css.map": "/veronical/static/css/main.88e94a4c.css.map",
+    "main.e198982f.js.map": "/veronical/static/js/main.e198982f.js.map",
     "787.63e47474.chunk.js.map": "/veronical/static/js/787.63e47474.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d341a81.css",
-    "static/js/main.79e24094.js"
+    "static/css/main.88e94a4c.css",
+    "static/js/main.e198982f.js"
   ]
 }
