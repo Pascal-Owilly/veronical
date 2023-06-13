@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import font from '../fonts/Lobster/Lobster-Regular.ttf';
 
 function usePrevious(value) {
   const ref = useRef();
@@ -8,41 +9,53 @@ function usePrevious(value) {
   return ref.current;
   }
 
-function Todo(props) {
-  const [isEditing, setEditing] = useState(false);
-  const [newName, setNewName] = useState('');
-  const [showConfirmation, setShowConfirmation] = useState(false);
-  const wasEditing = usePrevious(isEditing);
-
-  const [dateAdded, setDateAdded] = useState('');
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    props.editTask(props.id, newName);
-    setNewName('');
-    setEditing(false);
-  }
-
-  function handleChange(e) {
-    setNewName(e.target.value);
-  }
-
-  const handleDelete = () => {
-    setShowConfirmation(true);
-  };
-
-  const handleConfirmDelete = () => {
-    props.deleteTask(props.id);
-    setShowConfirmation(false);
-  };
-
-  const handleCancelDelete = () => {
-    setShowConfirmation(false);
-  };
-
+  function Todo(props) {
+    const [isEditing, setEditing] = useState(false);
+    const [newName, setNewName] = useState('');
+    const [showConfirmation, setShowConfirmation] = useState(false);
+    const wasEditing = usePrevious(isEditing);
   
-
-
+    const [dateAdded, setDateAdded] = useState('');
+  
+    useEffect(() => {
+      const storedDateAdded = localStorage.getItem(`dateAdded_${props.id}`);
+      if (storedDateAdded) {
+        setDateAdded(new Date(storedDateAdded));
+      } else {
+        setNewDateAdded();
+      }
+    }, [props.id]);
+  
+    function setNewDateAdded() {
+      const currentDate = new Date();
+      setDateAdded(currentDate);
+      localStorage.setItem(`dateAdded_${props.id}`, currentDate.toISOString());
+    }
+  
+    function handleSubmit(e) {
+      e.preventDefault();
+      props.editTask(props.id, newName);
+      setNewName('');
+      setEditing(false);
+    }
+  
+    function handleChange(e) {
+      setNewName(e.target.value);
+    }
+  
+    const handleDelete = () => {
+      setShowConfirmation(true);
+    };
+  
+    const handleConfirmDelete = () => {
+      props.deleteTask(props.id);
+      setShowConfirmation(false);
+    };
+  
+    const handleCancelDelete = () => {
+      setShowConfirmation(false);
+    };
+  
 
   const editingTemplate = (
     <form className="stack-small" onSubmit={handleSubmit}>
@@ -89,7 +102,10 @@ function Todo(props) {
           {props.name}
           <br />
           <span  style={{fontSize:'12px', color:'white', fontFamily:'cursive', fontStyle:'italic'}}>
-          Date Added: {new Date(props.currentDate).toLocaleDateString([], { year: 'numeric', month: 'long', day: 'numeric' })} {new Date(props.currentDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
+          {/* Date Added: {new Date(props.currentDate).toLocaleDateString([], { year: 'numeric', month: 'long', day: 'numeric' })} {new Date(props.currentDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })} */}
+          Date Added: {dateAdded && (
+           <span>{dateAdded.toLocaleString('en-KE', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' })}</span>
+          )}
           </span>
         </label>
       </div>

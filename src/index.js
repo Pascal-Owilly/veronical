@@ -12,7 +12,7 @@ const Index = () => {
   const [tasks, setTasks] = useState([
     {
       id: 'todo-1',
-      name: "Hi love, I made this special app to show you how much I miss you and can't wait to hold you in my arms again, I loved you the very first time I saw you and I always will ❤️",
+      name: "Sweatheart, I made this special app to show you how much I miss you and can't wait to hold you in my arms again, I loved you the moment I first saw you and I always will ❤️",
       completed: false,
       dateAdded: new Date(),
     },

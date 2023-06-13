@@ -7,26 +7,25 @@ const MyComponent = () => {
   const [modalContent, setModalContent] = useState('');
 
   const compliments = [
-    'You have the most beautiful smile, Baby Doll.',
-    'I feel incredibly lucky to have you in my life, Darling.',
-    'You are the most intelligent and talented person I know, Sunshine.',
-    'Your love and support mean the world to me, Sweetheart.',
-    'You are my Heartbeat.',
-    'You have a heart of gold, Love.',
-    'Your laughter brings me joy, Starlight.',
-    'You have a unique and captivating charm, Honeydew.',
-    'Your are the reason why everything around me is beautiful, Twinkle Toes.',
-    'Your intelligence and quick wit impress me, Cuddlebug.',
-    'You have a beautiful soul that shines through, Sweet Cheeks.',
-    'You are the definition of beauty, inside and out, Teddy Bear.',
-    'Your love and care make this world a better place, Honey.',
-    'You are my rock and my best friend, Angel Eyes.',
-    'Your smile makes my day brighter, Pumpkin.',
-    'You are the most amazing person I know, Cutie Pie.',
-    'Your passion and dedication inspire me to be a better person, Lovebird.',
-    'You bring so much love and joy into my life, Sweetie.',
-    'You prove to me that true love exists, Velvet.',
-    'I am so grateful to have you as my girlfriend, Vera.'
+
+    'I love your smile, Baby Doll ❤️',
+    'I feel lucky to have you, ❤️ Darling', 
+    'You have pretty eyes, Sunshine',
+    'You are my Heartbeat, Cuddlebug ❤️',
+    'I love kissing you ❤️',
+    'You are so beautiful, Honeydew ❤️ ',
+    'I love your natural beauty, 😘 Teddy Bear',
+    'I love your curves, Cutie Pie ❤️',
+    'You complete me, Love ❤️',
+    ' 😘 I love your natural body  ',
+    'True love exists in you, 😘 Velvet',
+    'Am glad you are my girlfriend, Vera 😘 ',
+    'You are my better half, Dolly ❤️',
+    'You are my missing piece, Starlight ❤️',
+    ' You are my princess, Lovebird ❤️',
+    'Am glad I found you, Love ❤️',
+    'Nakupenda sana, Dolly ❤️',
+    'Wewe ni dolly yangu 😘'
   ];
 
   const handleClick = () => {

@@ -7,7 +7,7 @@ const MyComponent = () => {
   const [modalContent, setModalContent] = useState('');
 
   const compliments = [
-    'Hi love, I made this special app to show you how much I miss you and can\'t wait to hold you in my arms again. I loved you the first day I saw you and I always will ❤️',
+    '😘Hi love❤️, I made this special app to show you how much I miss you and can\'t wait to hold you in my arms again. I loved you the first day I saw you and I always will ❤️😘😘😘',
   ];
 
   const handleClick = () => {
@@ -28,7 +28,7 @@ const MyComponent = () => {
   const greatVibes = {
     fontFamily:'Great_Vibes',
     fontWeight: '400',
-    fontSize:'28px',
+    fontSize:'25px',
     color:'white',
   }
 
@@ -36,7 +36,11 @@ const MyComponent = () => {
     <>
 
     <div className='modal-overlay'>
-    <button className='btn-pop' onClick={handleClick}>
+    <button
+     style={{
+      transition:'2s ease'
+     }}
+    className='btn-pop' onClick={handleClick}>
         <span role="img" aria-label="smiley face">🌻</span>
         {/* <span role="img" aria-label="smiley face">🌹</span> */}
       </button>
@@ -44,6 +48,7 @@ const MyComponent = () => {
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <p style={{fontFamily:'cursive'}}>To my dolly 😘</p>
             <p style={greatVibes}>{modalContent}</p>
             <button className='btn-dismiss' style={{fontSize:'40px'}} onClick={closeModal}>&times;</button>
           </div>

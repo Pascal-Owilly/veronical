@@ -1,6 +1,6 @@
 {
   "name": "todo",
-  "home": "https://pascal-owilly.github.io/veronical",
+  "homepage": "https://pascal-owilly.github.io/veronical",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

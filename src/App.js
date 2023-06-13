@@ -10,14 +10,15 @@ import hearts from '../src/img/hearts.jpg';
 import hearts2 from '../src/img/hearts2.jpg';
 import loveu2 from '../src/img/loveu2.jpg';
 import loveu3 from '../src/img/loveu3.jpg';
-import loveu4 from '../src/img/loveu4.jpg';
+import loveu4 from '../src/img/flower4.jpeg';
+import flower2 from '../src/img/flower5.jpeg';
 import liveu5 from '../src/img/loveu5.jpg';
 import vera from '../src/img/vera.png';
 import love from '../src/img/love.jpg';
-import love2 from '../src/img/love2.jpg';
+// import love2 from '../src/img/love2.jpg';
 import love3 from '../src/img/love3.jpg';
 import love4 from '../src/img/love4.jpg';
-import love5 from '../src/img/love5.jpg';
+// import love5 from '../src/img/love5.jpg';
 import love6 from '../src/img/love6.jpg';
 import love_island from '../src/img/love_island.jpg';
 import { Carousel } from 'react-bootstrap';
@@ -32,7 +33,7 @@ const FILTER_MAP = {
 
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
-const images = [love_island, hearts2, hearts, love5, loveu4, love, love3, love4];
+const images = [ love3, love4, hearts,  hearts2, flower2, love_island, loveu4,];
 
 function App(props) {
 
@@ -150,14 +151,12 @@ const greatVibes = {
   return (
     <>
     <header className="App-header" 
-    style={{
-      backgroundImage: `url(${images[currentIndex]})`,
-      backgroundSize: 'contain',
-      backgroundRepeat: 'repeat',
-      // minHeight: '100vh',
-      transition: 'backgroundImage 5s easeInOut',
-
-    }}
+style={{
+  backgroundImage: `url(${images[currentIndex]})`,
+  backgroundSize: 'contain',
+  backgroundRepeat: 'repeat',
+  transition: 'background-image 1.5s ease', 
+}}
     >
 <div className="App">
 
@@ -167,8 +166,9 @@ const greatVibes = {
 Pascal <img className="vera" src={vera} style={{width:'10%'}} />  Vera <Special />
 </p>
 <Smile />
+<img style={{marginTop:'-2rem'}} src={us} className="App-logo rounded__circle" alt="logo" />
 </div>
-        <img src={us} className="App-logo rounded__circle" alt="logo" />
+        
         
         
         <div> 
