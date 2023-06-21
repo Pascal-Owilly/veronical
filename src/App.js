@@ -169,7 +169,7 @@ Pascal <img className="vera" src={vera} style={{width:'10%'}} />  Vera <Special 
 <img style={{marginTop:'-2rem'}} src={us} className="App-logo rounded__circle" alt="logo" />
 </div>
         
-        
+        <hr /><br />
         
         <div> 
         <audio className='audio-container' src={waiting} controls={true} autoPlay={isPlaying} />  

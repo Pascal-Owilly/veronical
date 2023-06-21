@@ -24,8 +24,7 @@ const MyComponent = () => {
     'You are my missing piece, Starlight ❤️',
     ' You are my princess, Lovebird ❤️',
     'Am glad I found you, Love ❤️',
-    'Nakupenda sana, Dolly ❤️',
-    'Wewe ni dolly yangu 😘'
+    'Nakupenda milele, Dolly ❤️',
   ];
 
   const handleClick = () => {
