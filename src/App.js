@@ -142,7 +142,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
 const [modalContent, setModalContent] = useState('');
 
 const hearts = [
-  'A boy saw a girl and he fell in love with her on that very moment, the girl felt him too. then they got separated for a very long time promising each other that they would meet again. She gave him her earring and he wrote her poems. the girl had no idea what she meant to the boy. all she needed was trust but the boy loved her unconditionally. she tried to understand him  though she had doubts that he would leave her for someone else while they were apart. but she didn\'t know the boy keeps his promises and would wait for her to come back regardless of distance and time. She didn\'t know that the boy missed her so much that he occasionally lost focus. sometimes too much that he began to think something was wrong with him. one year was forever for the boy so he kept himself busy to stop thinking  about the girl.  he kept thinking about the taste of her lips,  the wamth of her body and her soft skin. how together they look like two souls that can never be separated. how they can be themselves together and how they almost got caught kissing. the way she pays attention makes the boy yearn for more of her. The promise they made to each other is worth the wait. the boy wants the girl to know that she can tell him anything, even the things she can\'t say. He admires how the girl carries confidence to her demeanor and come to him even when someone tries to stop her. They found each other ❤️'
+  'A boy saw a girl and he fell in love with her on that very moment. the girl felt him too. they look like they  are meant to be. Each night the girl left their house to come to the boy , but only for a short time. the  boy could eagerly wait for her outside to see her one last time otherwie he would not sleep that night. the boy wrote her poems and read them to her while holding her in his arms, he missses her laugh and her sexy eyes. He admires how the girl carries confidence to her demeanor and come to him even when someone tries to stop her.  then they got separated for a very long time promising each other that they would meet again. She gave him her earring and he held it close to his heart. the girl had no idea what she meant to the boy. all she needed was trust but the boy loved her unconditionally. she tried to understand him  though she had doubts that he would leave her for someone else while they were apart. but she didn\'t know the boy keeps his promises and would wait for her to come back regardless of distance and time. She didn\'t know that the boy missed her so much that he occasionally lost focus. sometimes too much that he began to think something was wrong with him. one year was forever for the boy so he kept himself busy to stop thinking  about the girl.  he kept thinking about the taste of her lips,  the wamth of her body and her soft skin. how together they look like two souls that can never be separated. how they can be themselves together and how they almost got caught kissing. the way she pays attention makes the boy yearn for more of her. The promise they made to each other is worth the wait. the boy wants the girl to know that she can tell him anything, even the things she can\'t say. They found each other ❤️'
 ]
 
 const handleClick = () => {
@@ -173,13 +173,13 @@ style={{
   <p style={greatVibes}>
 Pascal <img onClick={handleClick} className="vera" src={vera} style={{width:'10%', cursor:'pointer'}} />  Vera <Special />
 
-<div className='modal-overlay modal-hearts' style={{marginLeft:'4.9vh', cursor:'pointer', borderRadius:'20px', marginTop:'3px'}}>
+<div className='modal-overlay modal-hearts' style={{marginLeft:'4.9vh', cursor:'pointer', borderRadius:'20px', marginTop:'50px'}}>
 
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" style={{backgroundColor:'rgb(0,0,0,.8)', borderRadius:'5px', height:'355px', overflow:'scroll'}} onClick={(e) => e.stopPropagation()}>
-            <h5 style={{fontFamily:'cursive'}}>A story of a boy and a girl</h5>
-            <p className='mt-4' style={{fontWeight:'200', marginTop:'6vh', fontSize:'18px', color:'white', fontFamily:'cursive'}}>{modalContent}</p>
+            <h5 style={{fontFamily:'cursive', textDecoration:'overline'}}>Soulmates</h5>
+            <p className='mt-1' style={{fontWeight:'200', marginTop:'2vh', fontSize:'18px', color:'white', fontFamily:'cursive'}}>{modalContent}</p>
             <button className='btn-dismiss' style={{fontSize:'25px'}} onClick={closeModal}>&times;</button>
           </div>
         </div>
