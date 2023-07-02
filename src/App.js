@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import us from '../src/img/us.png';
 import './App.css';
 import Todo from './components/Todo';
@@ -8,22 +8,13 @@ import Form from './components/Form';
 import FilterButton from './components/FilterButton';
 import hearts from '../src/img/hearts.jpg';
 import hearts2 from '../src/img/hearts2.jpg';
-import loveu2 from '../src/img/loveu2.jpg';
-import loveu3 from '../src/img/loveu3.jpg';
 import loveu4 from '../src/img/flower4.jpeg';
 import flower2 from '../src/img/flower5.jpeg';
-import liveu5 from '../src/img/loveu5.jpg';
 import vera from '../src/img/vera.png';
-import love from '../src/img/love.jpg';
-// import love2 from '../src/img/love2.jpg';
 import love3 from '../src/img/love3.jpg';
 import love4 from '../src/img/love4.jpg';
-// import love5 from '../src/img/love5.jpg';
-import love6 from '../src/img/love6.jpg';
 import love_island from '../src/img/love_island.jpg';
-import { Carousel } from 'react-bootstrap';
-import promise from '../src/music/promise.mp3';
-import waiting from '../src/music/waitingforu.mp3';
+import stars from '../src/music/Ed_Sheeran _All_Of_The_Stars.mp3';
 
 const FILTER_MAP = {
   All: () => true,
@@ -131,7 +122,6 @@ function App(props) {
     />
     ))
 
-  const subject = props.subject;
   const paragraphs = {
   }
   const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
@@ -148,6 +138,24 @@ const greatVibes = {
   fontFamily:'Great_Vibes',
 }
 
+const [isModalOpen, setIsModalOpen] = useState(false);
+const [modalContent, setModalContent] = useState('');
+
+const hearts = [
+  'A boy saw a girl and he fell in love with her on that very moment, the girl felt him too. then they got separated for a very long time promising each other that they would meet again. She gave him her earring and he wrote her poems. the girl had no idea what she meant to the boy. all she needed was trust but the boy loved her unconditionally. she tried to understand him  though she had doubts that he would leave her for someone else while they were apart. but she didn\'t know the boy keeps his promises and would wait for her to come back regardless of distance and time. She didn\'t know that the boy missed her so much that he occasionally lost focus. sometimes too much that he began to think something was wrong with him. one year was forever for the boy so he kept himself busy to stop thinking  about the girl.  he kept thinking about the taste of her lips,  the wamth of her body and her soft skin. how together they look like two souls that can never be separated. how they can be themselves together and how they almost got caught kissing. the way she pays attention makes the boy yearn for more of her. The promise they made to each other is worth the wait. the boy wants the girl to know that she can tell him anything, even the things she can\'t say. He admires how the girl carries confidence to her demeanor and come to him even when someone tries to stop her. They found each other ❤️'
+]
+
+const handleClick = () => {
+  const compliment = hearts;
+  setModalContent(compliment);
+  setIsModalOpen(true);
+};
+
+const closeModal = () => {
+  setIsModalOpen(false);
+};
+
+
   return (
     <>
     <header className="App-header" 
@@ -163,16 +171,33 @@ style={{
 <div className='us' style={greatVibes}> 
 
   <p style={greatVibes}>
-Pascal <img className="vera" src={vera} style={{width:'10%'}} />  Vera <Special />
+Pascal <img onClick={handleClick} className="vera" src={vera} style={{width:'10%', cursor:'pointer'}} />  Vera <Special />
+
+<div className='modal-overlay modal-hearts' style={{marginLeft:'4.9vh', cursor:'pointer', borderRadius:'20px', marginTop:'3px'}}>
+
+      {isModalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" style={{backgroundColor:'rgb(0,0,0,.8)', borderRadius:'5px', height:'355px', overflow:'scroll'}} onClick={(e) => e.stopPropagation()}>
+            <h5 style={{fontFamily:'cursive'}}>A story of a boy and a girl</h5>
+            <p className='mt-4' style={{fontWeight:'200', marginTop:'6vh', fontSize:'18px', color:'white', fontFamily:'cursive'}}>{modalContent}</p>
+            <button className='btn-dismiss' style={{fontSize:'25px'}} onClick={closeModal}>&times;</button>
+          </div>
+        </div>
+      )}
+
+    </div>
 </p>
 <Smile />
-<img style={{marginTop:'-2rem'}} src={us} className="App-logo rounded__circle" alt="logo" />
+<img style={{marginTop:'-2rem'}} src={us} className="App-us rounded__circle" alt="Us against the world" />
 </div>
         
-        <hr /><br />
+        
         
         <div> 
-        <audio className='audio-container' src={waiting} controls={true} autoPlay={isPlaying} />  
+          <div className='container' style={{marginTop:'5vh'}}>
+          <audio className='audio-container' src={stars} controls={true} autoPlay={isPlaying} />  
+          </div>
+
         
     </div>
     

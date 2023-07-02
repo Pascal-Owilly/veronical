@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import './Smile.css';
-import font from '../fonts/Lobster/Lobster-Regular.ttf';
-import sunshine from '../img/download.png'
 const MyComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState('');
 
   const compliments = [
-    '😘Hi love❤️, I made this special app to show you how much I miss you and can\'t wait to hold you in my arms again. I loved you the first day I saw you and I always will ❤️😘😘😘',
+    '😘Hey girl❤️ I want to hold you again and do stuff with you. Nakumiss sana dolly ❤️😘😘 Nakungoja ❤️',
   ];
 
   const handleClick = () => {
@@ -20,17 +18,17 @@ const MyComponent = () => {
     setIsModalOpen(false);
   };
 
-  // const lobster = {
-  //   fontFamily:'lobster',
-  //   fontWeight:'0',
-  // }
-
-  const greatVibes = {
-    fontFamily:'Great_Vibes',
-    fontWeight: '400',
-    fontSize:'25px',
-    color:'white',
+  const lobster = {
+    fontFamily:'lobster',
+    fontWeight:'500',
   }
+
+  // const greatVibes = {
+  //   fontFamily:'Great_Vibes',
+  //   fontWeight: '400',
+  //   fontSize:'25px',
+  //   color:'white',
+  // }
 
   return (
     <>
@@ -42,15 +40,14 @@ const MyComponent = () => {
      }}
     className='btn-pop' onClick={handleClick}>
         <span role="img" aria-label="smiley face">🌻</span>
-        {/* <span role="img" aria-label="smiley face">🌹</span> */}
       </button>
 
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <p style={{fontFamily:'cursive'}}>To my dolly 😘</p>
-            <p style={greatVibes}>{modalContent}</p>
-            <button className='btn-dismiss' style={{fontSize:'40px'}} onClick={closeModal}>&times;</button>
+            {/* <p style={{fontFamily:'cursive'}}>To my dolly 😘</p> */}
+            <p className='mt-4' style={{fontWeight:'500', marginTop:'6vh', fontSize:'21px'}}>{modalContent}</p>
+            <button className='btn-dismiss' style={{fontSize:'25px'}} onClick={closeModal}>&times;</button>
           </div>
         </div>
       )}

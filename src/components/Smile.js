@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './Smile.css';
-import font from '../fonts/Lobster/Lobster-Regular.ttf';
-import sunshine from '../img/download.png'
 const MyComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState('');
@@ -10,20 +8,19 @@ const MyComponent = () => {
 
     'I love your smile, Baby Doll ❤️',
     'I feel lucky to have you, ❤️ Darling', 
-    'You have pretty eyes, Sunshine',
+    'You have pretty eyes, Sunshine ❤️',
     'You are my Heartbeat, Cuddlebug ❤️',
-    'I love kissing you ❤️',
+    'I love kissing you, ❤️ Baby 😘',
     'You are so beautiful, Honeydew ❤️ ',
     'I love your natural beauty, 😘 Teddy Bear',
     'I love your curves, Cutie Pie ❤️',
     'You complete me, Love ❤️',
-    ' 😘 I love your natural body  ',
-    'True love exists in you, 😘 Velvet',
+    ' 😘 I love your natural body, 😘 Velvet ',
     'Am glad you are my girlfriend, Vera 😘 ',
     'You are my better half, Dolly ❤️',
     'You are my missing piece, Starlight ❤️',
     ' You are my princess, Lovebird ❤️',
-    'Am glad I found you, Love ❤️',
+    'Am glad I found you, Sweetheart ❤️',
     'Nakupenda milele, Dolly ❤️',
   ];
 
@@ -38,10 +35,11 @@ const MyComponent = () => {
     setIsModalOpen(false);
   };
 
-  // const lobster = {
-  //   fontFamily:'lobster',
-  //   fontWeight:'0',
-  // }
+  const lobster = {
+    fontFamily:'Great_Vibes',
+    fontWeight:'500',
+  }
+
 
   const greatVibes = {
     fontFamily:'Great_Vibes',
@@ -55,14 +53,13 @@ const MyComponent = () => {
 
     <div className='modal-overlay'>
     <button className='btn-pop' onClick={handleClick}>
-        {/* <span role="img" aria-label="smiley face"><img src={sunshine} style={{width:'20px'}}/></span> */}
         <span role="img" aria-label="smiley face">🌹</span>
       </button>
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <p style={greatVibes}>{modalContent}</p>
-            <button className='btn-dismiss' onClick={closeModal}>&times;</button>
+          <div className="modal-content" style={{fontFamily:'cursive', marginTop:'-20px'}} onClick={(e) => e.stopPropagation()}>
+            <p style={{fontFamily:'Great_Vibes', marginTop:'10vh', fontSize:'21px'}}>{modalContent}</p>
+            <button style={{fontSize:'15px', bottom:'0'}} className='btn-dismiss mt-5' onClick={closeModal}>&times;</button>
           </div>
         </div>
       )}

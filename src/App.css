@@ -30,6 +30,12 @@ audio{
  align-items: flex-end;
 }
 
+.btn-pop-2{
+  cursor: pointer;
+ border: none;
+ display: flex;
+ align-items: flex-end;
+}
 
 audio::-webkit-media-controls-play-button{
   background-color: pink;
@@ -49,13 +55,14 @@ audio::-webkit-media-controls-play-button{
   font-size: 18px !important;
 }
 
-.App-logo {
+.App-us {
   /* width: 70% ; */
   width: 250px;
   height: 250px;
   pointer-events: none;
   border-radius: 100%;
   margin-top: 1rem; 
+  cursor: pointer;
 }
 .us{
   font-family: cursive !important;
@@ -70,14 +77,14 @@ audio::-webkit-media-controls-play-button{
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App-us {
+    animation: App-us-spin infinite 20s linear;
   }
 }
 
 @media only screen and (max-width: 576px) and (max-width: 767px) {
   .App-header {
-    background-image: url('../src/img/hearts2.jpg');
+    /* background-image: url('../src/img/hearts2.jpg');  */
     background-repeat: repeat;
     background-size: contain;
     /* background-color: #282c34; */
@@ -99,7 +106,7 @@ audio::-webkit-media-controls-play-button{
 
 @media only screen and (min-width: 992px) {
   .App-header {
-    background-image: url('../src/img/hearts.jpg');
+    /* background-image: url('../src/img/hearts.jpg'); */
     background-repeat: repeat;
     background-size: contain;
     background-color: #282c34;
@@ -113,28 +120,42 @@ audio::-webkit-media-controls-play-button{
     color: white;
     margin-top: .5rem;
   }
+  .modal-content {
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+     background-color: rgb(0, 0, 0, 0.6);
+     height: auto;
+     width: 70%;
+     margin-left: 55px;
+     margin-top: 5px; 
+     border-radius: 100%;
+  }
+  .modal-overlay-2{
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+     background-color: rgb(0, 0, 0, 0.6);
+     height: auto;
+     width: 70%;
+     margin-left: 55px;
+     margin-top: 5px; 
+     border-radius: 100%;
+
+  }
 }
 
-/* .App-header {
-  background-image: url('../src/img/love_island.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #282c34;
-  min-height: 100vh;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes App-us-spin {
   from {
     transform: rotate(0deg);
   }
