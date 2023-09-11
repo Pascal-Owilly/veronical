@@ -8,7 +8,6 @@ function Form(props){
         e.preventDefault();
         props.addTask(name)
         setName('');
-        // alert('I found my soulmate in Vera')
     }
     function handleChange(e){
         setName(e.target.value);
@@ -35,8 +34,8 @@ function Form(props){
                     value={name}
                     onChange={handleChange}
             />
-            <button type="submit" className="btn btn__primary btn__lg">
-            Add
+            <button type="submit" className="btn btn__primary btn__lg"style={{borderRadius:' 0 0 20px 20px', fontSize:'14px'}}>
+            add me
 </button>
 </form>
         </>

@@ -18,10 +18,10 @@ const MyComponent = () => {
     setIsModalOpen(false);
   };
 
-  const lobster = {
-    fontFamily:'lobster',
-    fontWeight:'500',
-  }
+  // const lobster = {
+  //   fontFamily:'lobster',
+  //   fontWeight:'500',
+  // }
 
   // const greatVibes = {
   //   fontFamily:'Great_Vibes',

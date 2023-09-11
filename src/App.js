@@ -8,13 +8,14 @@ import Form from './components/Form';
 import FilterButton from './components/FilterButton';
 import hearts from '../src/img/hearts.jpg';
 import hearts2 from '../src/img/hearts2.jpg';
-import loveu4 from '../src/img/flower4.jpeg';
+import loveu4 from '../src/img/flower4.jpg';
 import flower2 from '../src/img/flower5.jpeg';
 import vera from '../src/img/vera.png';
 import love3 from '../src/img/love3.jpg';
 import love4 from '../src/img/love4.jpg';
 import love_island from '../src/img/love_island.jpg';
-import stars from '../src/music/Ed_Sheeran _All_Of_The_Stars.mp3';
+import stars from '../src/music/i_knew_loved_you.mp3';
+import loveu6 from '../src/img/loveu6.jpg';
 
 const FILTER_MAP = {
   All: () => true,
@@ -24,16 +25,11 @@ const FILTER_MAP = {
 
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
-const images = [ love3, love4, hearts,  hearts2, flower2, love_island, loveu4,];
+const images = [ love3, love4, hearts,  hearts2, flower2, love_island, loveu6, loveu4,];
 
 function App(props) {
 
   const [tasks, setTasks] = useState([]);
-
-  // const [tasks, setTasks] = useState(() => {
-  //   const storedTasks = localStorage.getItem('tasks');
-  //   return storedTasks ? JSON.parse(storedTasks) : [];
-  // });
 
   const [filter, setFilter] = useState('Active');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -140,20 +136,40 @@ const greatVibes = {
 
 const [isModalOpen, setIsModalOpen] = useState(false);
 const [modalContent, setModalContent] = useState('');
+const [isPamojaModalOpen, setIsPamojaModalOpen] = useState(false);
+const [pamojaModalContent, setPamojaModalContent] = useState('');
 
 const hearts = [
   'Once upon a time a boy met a girl and he fell in love with her on that very moment. the girl felt him too. they look like they are meant to be. Each night the girl left their house to go to the boy, but only for a short time. the  boy could eagerly wait for her outside to see her one last time otherwie he would not sleep that night. the boy wrote her poems and read them to her while holding her in his arms, he missses her laugh, her sexy eyes and mind. He admires how the girl carries confidence to her demeanor to go to him even when someone tries to stop her. he loves the way she reasons so he thinks that together they can face the world and do great things. the few days they talked, they felt like they knew each other their whole life. then they got separated for a very long time, promising each other that they would meet again. She gave him her earring and he held it close to his heart. the girl had no idea what she meant to the boy. all she needed was trust but the boy loved her unconditionally. she tried to understand him though she had doubts that he would leave her for someone else while they were apart. she doesn\'t trust boys from the city but what she didn\'t know is the boy keeps his promises and will wait for her to come back regardless of distance and time. She didn\'t know that the boy misses her so much that he occasionally looses focus. sometimes too much that he begins to think that something is wrong with him. one year was forever for the boy so he kept himself busy to stop thinking about the girl. he keeps thinking about the taste of her lips, the wamth of her body and her soft skin. how together they look like two souls that can never be separated. how they can be themselves together and how they almost got caught kissing. the way she pays attention makes the boy yearn for more of her. The promise they made to each other is worth the wait. the boy wants the girl to know that she can tell him anything, even the things she can\'t say. that she can wake him up in the middle of the night to talk about anything.'
 ]
 
+const handlePamojaClick = () => {
+  const pamojaContent = [
+    "When I first saw you, you attracted me,",
+    "When I first talked to you, I liked you,",
+    "When I first held you, I knew we belong with each other,",
+    "When I first kissed you, I loved you,",
+    "And now I'm afraid to lose you",
+  ];
+
+  setPamojaModalContent(pamojaContent);
+  setIsPamojaModalOpen(true);
+};
 const handleClick = () => {
   const compliment = hearts;
   setModalContent(compliment);
   setIsModalOpen(true);
 };
 
+
 const closeModal = () => {
   setIsModalOpen(false);
 };
+
+const closePamojaModal = () => {
+  setIsPamojaModalOpen(false);
+};
+
 
 
   return (
@@ -188,9 +204,45 @@ Pascal <img onClick={handleClick} className="vera" src={vera} style={{width:'10%
       )}
 
     </div>
+
+    <div className='modal-pamoj-0verlay modal-pamoja mt-4' >
+  {isPamojaModalOpen && (
+    <div className="modal" onClick={closePamojaModal}>
+      <div className="pamoja-modal-content m-1" onClick={(e) => e.stopPropagation()} style={{
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        borderRadius: '5px',
+        padding: '10px',
+        position: 'relative',
+        backdropFilter: 'blur(8px)', // Add backdrop filter to blur the background
+      }}>
+        <p
+          className='mt-2'
+          style={{
+            marginTop: '2vh',
+            fontSize: '14px',
+            color: 'white',
+            fontFamily: 'arial',
+            background: 'rgba(0, 0, 0, 0.5)', // Add background opacity
+            padding: '10px',
+            borderRadius: '5px',
+            textTransform:'lowercase',
+          }}
+        >
+          {pamojaModalContent}
+        </p>
+        <button className='btn-dismiss' style={{ fontSize: '25px' }} onClick={closePamojaModal}>
+          &times;
+        </button>
+      </div>
+    </div>
+  )}
+</div>
+
 </p>
 <Smile />
-<img style={{marginTop:'-2rem'}} src={us} className="App-us rounded__circle" alt="Us against the world" />
+<span onClick={handlePamojaClick} style={{ marginTop: '-2rem', cursor: 'pointer' }}>
+        <img src={us} className="App-us rounde_circle" style={{opacity:'0.6'}} alt="Us against the world" />
+      </span>
 </div>
         
         

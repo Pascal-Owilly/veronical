@@ -74,6 +74,7 @@ audio::-webkit-media-controls-play-button{
 
 .vera{
   border-radius: 100%;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
